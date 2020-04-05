@@ -57,16 +57,16 @@
       // When invoked with string numbers, it should evaluate them as true integers
       var result = difference('2', '1');
 
-      if (result !== 1) throw new Error("Expected sum('1','2') to be 0. Received: " + result);
+      if (result !== 1) throw new Error("Expected difference('2','1') to be 0. Received: " + result);
 
 
       // --------------------------------------------------
       // Test Case 6
       // --------------------------------------------------
       // When invoked with decimals, it must be rounded to 2 d.p
-/*      var result = sum(1.4566, 3.3);
+      var result = difference(4.4444, 3.3);
 
-      if (result !== 4.76)  throw new Error("Expected sum(1.4566, 3.3) to be 0. Received: " + result);*/
+      if (result !== 1.14)  throw new Error("Expected difference(4.4444, 3.3) to be 0. Received: " + result);
 
 
       // --------------------------------------------------

@@ -51,6 +51,10 @@
       // Test Case 3
       // --------------------------------------------------
       // It should ignore additional numbers.
+      var result = quotient (4, 2, 1);
+
+      if (result !== 2)  throw new Error('Expected quotient(4, 2, 1) to be 6. Received: ' + result);
+
 
       // --------------------------------------------------
       // Test Case 4

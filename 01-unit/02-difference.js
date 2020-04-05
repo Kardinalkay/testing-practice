@@ -73,9 +73,9 @@
       // Test Case 7
       // --------------------------------------------------
       // When invoked with strings, it must evaluate to NaN
-/*      var result = sum('string');
+      var result = difference('string');
 
-      if (!isNaN(result)) throw new Error("Expected sum('string') to be NaN. Received: " + result);*/
+      if (!isNaN(result)) throw new Error("Expected difference('string') to be NaN. Received: " + result);
 
       console.log('All tests passed successfully.');
 

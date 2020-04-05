@@ -95,7 +95,7 @@
 
             break;
 
-            case 'quotient' : return product (x, y);
+            case 'quotient' : return quotient (x, y);
 
             break;
 
@@ -140,6 +140,11 @@
       // Test Case 4
       // --------------------------------------------------
       // It should return the correct quotient when the user provides: 'divide', 9, 3.
+
+      var result = calc('quotient', 9, 3);
+
+      if (result !== 3) throw new Error('Expected calc("quotient", 9, 3) to be 3. Received: ' + result);
+
 
       // --------------------------------------------------
       // Test Case 5

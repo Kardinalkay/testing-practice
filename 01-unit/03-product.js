@@ -4,8 +4,8 @@
     function product(x,y) {
 
         // Ensure parameters are defined
-        var x = (x == undefined) ? 0 : parseFloat(x);
-        var y = (y == undefined) ? 0 : parseFloat(y);
+        var x = (x == undefined) ? 1 : parseFloat(x);
+        var y = (y == undefined) ? 1 : parseFloat(y);
 
         var val = (x * y);
 
@@ -40,13 +40,17 @@
       // It should ignore additional numbers.
       var result = product (3, 2, 1);
 
-      if (result !== 1)  throw new Error('Expected difference(3, 2, 1) to be 6. Received: ' + result);
+      if (result !== 6)  throw new Error('Expected product(3, 2, 1) to be 6. Received: ' + result);
 
 
       // --------------------------------------------------
       // Test Case 4
       // --------------------------------------------------
       // When invoked with only 1 number, it should return that number.
+      var result = product(1);
+
+      if (result !== 1) throw new Error('Expected product(1) to be 1. Received: ' + result);
+
 
       // --------------------------------------------------
       // Test Case 5

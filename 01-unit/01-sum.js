@@ -7,7 +7,9 @@
         var x = (x == undefined) ? 0 : parseFloat(x);
         var y = (y == undefined) ? 0 : parseFloat(y);
 
-        return (x + y);
+        var val = (x + y);
+
+        return +(Math.round(val + "e+2")  + "e-2");
     }
 
     // ==================================================
@@ -27,7 +29,7 @@
       // --------------------------------------------------
       // It should ignore additional numbers (3 in this case).
       var result = sum(1, 2, 3);
-       
+
       if (result !== 3)  throw new Error('Expected sum(1, 2, 3) to be 3. Received: ' + result);
 
 
@@ -56,6 +58,15 @@
       var result = sum('1', '2');
 
       if (result !== 3)  throw new Error("Expected sum('1','2') to be 0. Received: " + result);
+
+
+      // --------------------------------------------------
+      // Test Case 6
+      // --------------------------------------------------
+      // When invoked with decimals, it must be rounded to 2 d.p
+      var result = sum(1.4566, 3.3);
+
+      if (result !== 4.76)  throw new Error("Expected sum(1.4566, 3.3) to be 0. Received: " + result);
 
 
       console.log('All tests passed successfully.');

@@ -38,6 +38,10 @@
       // Test Case 3
       // --------------------------------------------------
       // It should ignore additional numbers.
+      var result = product (3, 2, 1);
+
+      if (result !== 1)  throw new Error('Expected difference(3, 2, 1) to be 6. Received: ' + result);
+
 
       // --------------------------------------------------
       // Test Case 4

@@ -14,6 +14,8 @@
           var x = (x == undefined) ? 1 : parseFloat(x);
           var y = (y == undefined) ? 1 : parseFloat(y);
 
+          if (y == 0) return 'ERROR';
+
       }
 
       var val = (x / y);
@@ -40,6 +42,10 @@
       // Test Case 2
       // --------------------------------------------------
       // It should return the text 'ERROR' when the second number is 0.
+      var result = quotient(1, 0);
+
+      if (result !== 'ERROR') throw new Error('Expected quotient(1, 0) to be 0. Received: ' + result);
+
 
       // --------------------------------------------------
       // Test Case 3

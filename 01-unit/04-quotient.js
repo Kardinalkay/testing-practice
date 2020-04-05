@@ -74,6 +74,16 @@
       if (result !== 0) throw new Error('Expected quotient() to be 0. Received: ' + result);
 
 
+      // --------------------------------------------------
+      // Test Case 6
+      // --------------------------------------------------
+      // When invoked with decimals, it must be rounded to 2 d.p
+      var result = quotient(4.4444, 3.3);
+
+      if (result !== 1.35)  throw new Error("Expected quotient(4.4444, 3.3) to be 1.35. Received: " + result);
+
+
+
       console.log('All tests passed successfully.');
 
     // ==================================================

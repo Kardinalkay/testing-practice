@@ -126,11 +126,15 @@
       if (result !== 10) throw new Error('Expected calc("difference", 20, 10) to be 10. Received: ' + result);
 
 
-
       // --------------------------------------------------
       // Test Case 3
       // --------------------------------------------------
       // It should return the correct product when the user provides: 'multiply', 9, 9.
+
+      var result = calc('product', 9, 9);
+
+      if (result !== 81) throw new Error('Expected calc("product", 9, 9) to be 81. Received: ' + result);
+
 
       // --------------------------------------------------
       // Test Case 4

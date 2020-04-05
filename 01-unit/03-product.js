@@ -77,9 +77,16 @@
       // When invoked with decimals, it must be rounded to 2 d.p
       var result = product(4.4444, 3.3);
 
-      if (result !== 14.67)  throw new Error("Expected difference(4.4444, 3.3) to be 14.67. Received: " + result);
+      if (result !== 14.67)  throw new Error("Expected product(4.4444, 3.3) to be 14.67. Received: " + result);
 
 
+      // --------------------------------------------------
+      // Test Case 7
+      // --------------------------------------------------
+      // When invoked with strings, it must evaluate to NaN
+      var result = product('string');
+
+      if (!isNaN(result)) throw new Error("Expected product('string') to be NaN. Received: " + result);
 
       console.log('All tests passed successfully.');
 

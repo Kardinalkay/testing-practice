@@ -47,7 +47,7 @@
       // --------------------------------------------------
       // When invoked with no numbers, it should return 0.
       var result = difference();
-      alert (result);
+
       if (result !== 0) throw new Error('Expected difference() to be 0. Received: ' + result);
 
 
@@ -55,9 +55,9 @@
       // Test Case 5
       // --------------------------------------------------
       // When invoked with string numbers, it should evaluate them as true integers
-/*      var result = sum('1', '2');
+      var result = difference('2', '1');
 
-      if (result !== 3) throw new Error("Expected sum('1','2') to be 0. Received: " + result);*/
+      if (result !== 1) throw new Error("Expected sum('1','2') to be 0. Received: " + result);
 
 
       // --------------------------------------------------

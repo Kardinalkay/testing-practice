@@ -83,6 +83,14 @@
       if (result !== 1.35)  throw new Error("Expected quotient(4.4444, 3.3) to be 1.35. Received: " + result);
 
 
+      // --------------------------------------------------
+      // Test Case 7
+      // --------------------------------------------------
+      // When invoked with strings, it must evaluate to NaN
+      var result = quotient('string');
+
+      if (!isNaN(result)) throw new Error("Expected quotient('string') to be NaN. Received: " + result);
+
 
       console.log('All tests passed successfully.');
 

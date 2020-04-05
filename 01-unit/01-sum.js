@@ -13,15 +13,17 @@
       // Test Case 1
       // --------------------------------------------------
       // It should return the sum of two numbers.
-      let result = sum(1, 2);
+      var result = sum(1, 2);
       
       if (result !== 3)  throw new Error('Expected sum(1, 1) to be 2. Received: ' + result);
 
       // --------------------------------------------------
       // Test Case 2
       // --------------------------------------------------
-      // It should ignore additional numbers.
+      // It should ignore additional numbers (3 in this case).
+      var result = sum(1, 2, 3);
        
+      if (result !== 3)  throw new Error('Expected sum(1, 2, 3) to be 3. Received: ' + result);
 
 
       // --------------------------------------------------

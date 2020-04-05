@@ -4,8 +4,8 @@
     function sum(x,y) {
 
         // Ensure parameters are defined
-        var x = (x == undefined) ? 0 : x;
-        var y = (y == undefined) ? 0 : y;
+        var x = (x == undefined) ? 0 : parseFloat(x);
+        var y = (y == undefined) ? 0 : parseFloat(y);
 
         return (x + y);
     }
@@ -44,10 +44,18 @@
       // Test Case 4
       // --------------------------------------------------
       // When invoked with no numbers, it should return 0.
-
       var result = sum();
 
       if (result !== 0)  throw new Error('Expected sum() to be 0. Received: ' + result);
+
+
+      // --------------------------------------------------
+      // Test Case 5
+      // --------------------------------------------------
+      // When invoked with string numbers, it should evaluate them as true integers
+      var result = sum('1', '2');
+
+      if (result !== 3)  throw new Error("Expected sum('1','2') to be 0. Received: " + result);
 
 
       console.log('All tests passed successfully.');

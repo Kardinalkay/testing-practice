@@ -69,6 +69,16 @@
       if (result !== 4.76)  throw new Error("Expected sum(1.4566, 3.3) to be 0. Received: " + result);
 
 
+      // --------------------------------------------------
+      // Test Case 7
+      // --------------------------------------------------
+      // When invoked with strings, it must evaluate to NaN
+      var result = sum('string');
+
+      if (!isNaN(result)) throw new Error("Expected sum('string') to be NaN. Received: " + result);
+
+
+
       console.log('All tests passed successfully.');
 
     // ==================================================

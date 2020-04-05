@@ -17,6 +17,8 @@
 
         var val = (x * y);
 
+        // Ensure decimals are rounded to 2 d.p only if necessary 
+
         return +(Math.round(val + "e+2")  + "e-2");
 
     }
@@ -29,9 +31,9 @@
       // Test Case 1
       // --------------------------------------------------
       // It should return the product of two numbers.
-       var result = product(2, 2);
+      var result = product(2, 2);
 
-       if (result !== 4) throw new Error('Expected product(2, 2) to be 4. Received: ' + result);
+      if (result !== 4) throw new Error('Expected product(2, 2) to be 4. Received: ' + result);
 
       // --------------------------------------------------
       // Test Case 2
@@ -67,6 +69,15 @@
       var result = product();
 
       if (result !== 0) throw new Error('Expected product() to be 0. Received: ' + result);
+
+
+      // --------------------------------------------------
+      // Test Case 6
+      // --------------------------------------------------
+      // When invoked with decimals, it must be rounded to 2 d.p
+      var result = product(4.4444, 3.3);
+
+      if (result !== 14.67)  throw new Error("Expected difference(4.4444, 3.3) to be 14.67. Received: " + result);
 
 
 

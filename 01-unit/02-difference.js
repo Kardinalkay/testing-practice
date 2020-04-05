@@ -46,9 +46,9 @@
       // Test Case 4
       // --------------------------------------------------
       // When invoked with no numbers, it should return 0.
-/*      var result = sum();
-
-      if (result !== 0) throw new Error('Expected sum() to be 0. Received: ' + result);*/
+      var result = difference();
+      alert (result);
+      if (result !== 0) throw new Error('Expected difference() to be 0. Received: ' + result);
 
 
       // --------------------------------------------------

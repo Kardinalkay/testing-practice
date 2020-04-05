@@ -1,47 +1,147 @@
-// ==================================================
-// DEFINE FUNCTION(S)
-// ==================================================
-function calc() {
+    // ==================================================
+    // DEFINE FUNCTION(S)
+    // ==================================================
 
-}
+    // Sum function
 
-// ==================================================
-// DEFINE AND EXECUTE TEST CASES
-// ==================================================
-try {
-  // --------------------------------------------------
-  // Test Case 1
-  // --------------------------------------------------
-  // It should return the correct sum when the user provides: 'add', 1, 1.
-  var result = calc('add', 1, 1);
-  if (result !== 2) throw new Error('Expected calc("add", 1, 1) to be 2. Received: ' + result);
+    function sum(x,y) {
 
-  // --------------------------------------------------
-  // Test Case 2
-  // --------------------------------------------------
-  // It should return the correct difference when the user provides: 'subtract', 20, 10.
+        // Ensure parameters are defined
+        var x = (x == undefined) ? 0 : parseFloat(x);
+        var y = (y == undefined) ? 0 : parseFloat(y);
 
-  // --------------------------------------------------
-  // Test Case 3
-  // --------------------------------------------------
-  // It should return the correct product when the user provides: 'multiply', 9, 9.
+        var val = (x + y);
 
-  // --------------------------------------------------
-  // Test Case 4
-  // --------------------------------------------------
-  // It should return the correct quotient when the user provides: 'divide', 9, 3.
+        return +(Math.round(val + "e+2")  + "e-2");
+    }
 
-  // --------------------------------------------------
-  // Test Case 5
-  // --------------------------------------------------
-  // It should return the message 'Operation not supported.' when the user provides: exponent, 2, 8.
+    // Difference function 
 
-  console.log('All tests passed successfully.');
+    function difference(x,y) {
 
-// ==================================================
-// PRINT ERRORS
-// ==================================================
-} catch (e) {
-  console.warn('Whoops, the following test did not pass:');
-  console.error(e.message);
-}
+        // Ensure parameters are defined
+        var x = (x == undefined) ? 0 : parseFloat(x);
+        var y = (y == undefined) ? 0 : parseFloat(y);
+
+        var val = (x - y);
+
+        return +(Math.round(val + "e+2")  + "e-2");
+    }
+
+
+    // Product function 
+
+    function product(x,y) {
+
+        if (x == undefined && y == undefined) {
+
+            x = y = 0;
+
+        } else {
+
+            // Ensure parameters are defined
+            var x = (x == undefined) ? 1 : parseFloat(x);
+            var y = (y == undefined) ? 1 : parseFloat(y);
+
+        }
+
+        var val = (x * y);
+
+        // Ensure decimals are rounded to 2 d.p only if necessary 
+
+        return +(Math.round(val + "e+2")  + "e-2");
+
+    }
+
+    // Quotient function
+
+    function quotient(x,y) {
+
+      if (x == undefined && y == undefined) {
+
+          return 0;
+
+      } else {
+
+          // Ensure parameters are defined
+          var x = (x == undefined) ? 1 : parseFloat(x);
+          var y = (y == undefined) ? 1 : parseFloat(y);
+
+          if (y == 0) return 'ERROR';
+
+      }
+
+      var val = (x / y);
+
+      // Ensure decimals are rounded to 2 d.p only if necessary 
+
+      return +(Math.round(val + "e+2")  + "e-2");
+
+    }
+
+    function calc(operation, x, y) {
+
+        switch (operation) {
+
+            case 'sum' : return sum (x, y);
+
+            break;
+
+            case 'difference' : return difference (x, y);
+
+            break;
+
+            case 'product' : return product (x, y);
+
+            break;
+
+            case 'quotient' : return product (x, y);
+
+            break;
+
+            default : return 'Unknown Operation';
+
+        }
+
+    }
+
+    // ==================================================
+    // DEFINE AND EXECUTE TEST CASES
+    // ==================================================
+    try {
+      // --------------------------------------------------
+      // Test Case 1
+      // --------------------------------------------------
+      // It should return the correct sum when the user provides: 'add', 1, 1.
+      var result = calc('add', 1, 1);
+      if (result !== 2) throw new Error('Expected calc("add", 1, 1) to be 2. Received: ' + result);
+
+      // --------------------------------------------------
+      // Test Case 2
+      // --------------------------------------------------
+      // It should return the correct difference when the user provides: 'subtract', 20, 10.
+
+      // --------------------------------------------------
+      // Test Case 3
+      // --------------------------------------------------
+      // It should return the correct product when the user provides: 'multiply', 9, 9.
+
+      // --------------------------------------------------
+      // Test Case 4
+      // --------------------------------------------------
+      // It should return the correct quotient when the user provides: 'divide', 9, 3.
+
+      // --------------------------------------------------
+      // Test Case 5
+      // --------------------------------------------------
+      // It should return the message 'Operation not supported.' when the user provides: exponent, 2, 8.
+
+      console.log('All tests passed successfully.');
+
+    // ==================================================
+    // PRINT ERRORS
+    // ==================================================
+    } catch (e) {
+      console.warn('Whoops, the following test did not pass:');
+      console.error(e.message);
+    }

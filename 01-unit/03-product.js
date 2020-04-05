@@ -3,9 +3,17 @@
     // ==================================================
     function product(x,y) {
 
-        // Ensure parameters are defined
-        var x = (x == undefined) ? 1 : parseFloat(x);
-        var y = (y == undefined) ? 1 : parseFloat(y);
+        if (x == undefined && y == undefined) {
+
+            x = y = 0;
+
+        } else {
+
+            // Ensure parameters are defined
+            var x = (x == undefined) ? 1 : parseFloat(x);
+            var y = (y == undefined) ? 1 : parseFloat(y);
+
+        }
 
         var val = (x * y);
 
@@ -21,9 +29,9 @@
       // Test Case 1
       // --------------------------------------------------
       // It should return the product of two numbers.
-      var result = product(2, 2);
+       var result = product(2, 2);
 
-      if (result !== 4) throw new Error('Expected product(2, 2) to be 4. Received: ' + result);
+       if (result !== 4) throw new Error('Expected product(2, 2) to be 4. Received: ' + result);
 
       // --------------------------------------------------
       // Test Case 2
@@ -56,6 +64,11 @@
       // Test Case 5
       // --------------------------------------------------
       // When invoked with no numbers, it should return 0.
+      var result = product();
+
+      if (result !== 0) throw new Error('Expected product() to be 0. Received: ' + result);
+
+
 
       console.log('All tests passed successfully.');
 

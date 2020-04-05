@@ -19,20 +19,19 @@
       // --------------------------------------------------
       // Test Case 1
       // --------------------------------------------------
-      // It should return the sum of two numbers.
+      // It should return the difference of two numbers.
       var result = difference(2, 1);
-      alert (result);
       
-      if (result !== 1) throw new Error('Expected sum(1, 1) to be 2. Received: ' + result);
+      if (result !== 1) throw new Error('Expected difference(2, 1) to be 1. Received: ' + result);
 
       // --------------------------------------------------
       // Test Case 2
       // --------------------------------------------------
       // It should ignore additional numbers (3 in this case).
-/*      var result = sum(1, 2, 3);
+      var result = difference(3, 2, 1);
 
-      if (result !== 3)  throw new Error('Expected sum(1, 2, 3) to be 3. Received: ' + result);
-*/
+      if (result !== 1)  throw new Error('Expected difference(3, 2, 1) to be 1. Received: ' + result);
+
 
       // --------------------------------------------------
       // Test Case 3

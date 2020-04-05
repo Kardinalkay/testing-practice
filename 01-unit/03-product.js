@@ -8,7 +8,6 @@
         var y = (y == undefined) ? 0 : parseFloat(y);
 
         var val = (x * y);
-        alert (val);
 
         return +(Math.round(val + "e+2")  + "e-2");
 
@@ -30,6 +29,10 @@
       // Test Case 2
       // --------------------------------------------------
       // It should return 0 when either of the numbers are 0.
+      var result = product(1, 0);
+
+      if (result !== 0) throw new Error('Expected product(1, 0) to be 0. Received: ' + result);
+
 
       // --------------------------------------------------
       // Test Case 3

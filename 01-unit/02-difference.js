@@ -37,9 +37,9 @@
       // Test Case 3
       // --------------------------------------------------
       // When invoked with only 1 number, it should return that number.
-/*      var result = sum(1);
+      var result = difference(1);
 
-      if (result !== 1) throw new Error('Expected sum(1) to be 1. Received: ' + result);*/
+      if (result !== 1) throw new Error('Expected difference(1) to be 1. Received: ' + result);
 
 
       // --------------------------------------------------
